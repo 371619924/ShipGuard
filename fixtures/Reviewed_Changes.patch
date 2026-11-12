@@ -1,0 +1,120 @@
+--- unsafe/kubernetes.json
++++ safe/kubernetes.json
+@@ -7,34 +7,29 @@
+       "namespace": "sample"
+     },
+     "spec": {
+-      "automountServiceAccountToken": true,
++      "automountServiceAccountToken": false,
+       "securityContext": {
+-        "runAsNonRoot": false,
++        "runAsNonRoot": true,
+         "runAsUser": 1001,
+         "seccompProfile": {
+-          "type": "Unconfined"
++          "type": "RuntimeDefault"
+         }
+       },
+       "containers": [
+         {
+           "name": "app",
+-          "image": "example.invalid/demo:latest",
++          "image": "example.invalid/demo@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+           "securityContext": {
+-            "allowPrivilegeEscalation": true,
+-            "readOnlyRootFilesystem": false,
++            "allowPrivilegeEscalation": false,
++            "readOnlyRootFilesystem": true,
+             "capabilities": {
+               "drop": [
+                 "ALL"
+-              ],
+-              "add": [
+-                "SYS_ADMIN"
+               ]
+-            },
+-            "privileged": true
++            }
+           }
+         }
+-      ],
+-      "hostPID": true
++      ]
+     }
+   }
+ ]
+--- unsafe/terraform.json
++++ safe/terraform.json
+@@ -13,8 +13,8 @@
+           "ingress": [
+             {
+               "protocol": "tcp",
+-              "from_port": 22,
+-              "to_port": 22,
++              "from_port": 443,
++              "to_port": 443,
+               "cidr_blocks": [
+                 "0.0.0.0/0"
+               ],
+@@ -34,7 +34,7 @@
+           "create"
+         ],
+         "after": {
+-          "encrypted": false
++          "encrypted": true
+         },
+         "after_unknown": {}
+       }
+@@ -49,7 +49,7 @@
+         ],
+         "after": {
+           "block_public_acls": true,
+-          "block_public_policy": false,
++          "block_public_policy": true,
+           "ignore_public_acls": true,
+           "restrict_public_buckets": true
+         },
+@@ -65,25 +65,9 @@
+           "create"
+         ],
+         "after": {
+-          "policy": "{\"Statement\": [{\"Effect\": \"Allow\", \"Action\": \"*\", \"Resource\": \"*\"}]}"
++          "policy": "{\"Version\": \"2012-10-17\", \"Statement\": [{\"Effect\": \"Allow\", \"Action\": [\"s3:GetObject\"], \"Resource\": [\"arn:aws:s3:::sample-only/*\"]}]}"
+         },
+         "after_unknown": {}
+-      }
+-    },
+-    {
+-      "mode": "managed",
+-      "type": "aws_ebs_volume",
+-      "address": "aws_ebs_volume.pending",
+-      "change": {
+-        "actions": [
+-          "create"
+-        ],
+-        "after": {
+-          "encrypted": false
+-        },
+-        "after_unknown": {
+-          "encrypted": true
+-        }
+       }
+     }
+   ]
+--- unsafe/src/service.py
++++ safe/src/service.py
+@@ -1,3 +1,4 @@
+-from subprocess import run as launch
+-launch("echo demo", shell=True)
+-eval("1+1")
++import subprocess
++
++def process(value):
++    return subprocess.run(["printf", "%s", value], shell=False, check=True)
+--- unsafe/config.env
++++ safe/config.env
+@@ -1,2 +1,2 @@
+-# Deliberately synthetic detector fixture; never a real credential
+-TOKEN=ghp_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
++# Synthetic configuration only
++MODE=demo

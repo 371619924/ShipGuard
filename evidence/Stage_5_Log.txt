@@ -1,0 +1,1 @@
+{"status": "clean", "active_findings": 0, "suppressed_findings": 0, "scope": {"input_files": 4, "kubernetes_containers": 1, "terraform_resources": 4, "python_files": 1}}

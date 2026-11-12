@@ -1,0 +1,14 @@
+{
+  "active_findings": 0,
+  "as_of": "2026-10-30",
+  "findings": [],
+  "scope": {
+    "input_files": 4,
+    "kubernetes_containers": 1,
+    "python_files": 1,
+    "terraform_resources": 4
+  },
+  "status": "clean",
+  "suppressed_findings": 0,
+  "tool": "ShipGuard"
+}

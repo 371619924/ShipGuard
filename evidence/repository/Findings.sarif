@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "ShipGuard",
+          "rules": [
+            {
+              "id": "KUB-NONROOT",
+              "shortDescription": {
+                "text": "Require effective non-root execution and prohibit explicit UID zero."
+              }
+            },
+            {
+              "id": "KUB-PRIVILEGED",
+              "shortDescription": {
+                "text": "Do not enable privileged containers."
+              }
+            },
+            {
+              "id": "KUB-ESCALATION",
+              "shortDescription": {
+                "text": "Explicitly disable privilege escalation."
+              }
+            },
+            {
+              "id": "KUB-CAPABILITIES",
+              "shortDescription": {
+                "text": "Drop ALL capabilities and add back only NET_BIND_SERVICE if needed."
+              }
+            },
+            {
+              "id": "KUB-SECCOMP",
+              "shortDescription": {
+                "text": "Use RuntimeDefault or an explicitly configured Localhost seccomp profile."
+              }
+            },
+            {
+              "id": "KUB-HOST",
+              "shortDescription": {
+                "text": "Do not share host namespaces or mount hostPath volumes."
+              }
+            },
+            {
+              "id": "KUB-IMAGE",
+              "shortDescription": {
+                "text": "Reference container images with a full sha256 digest."
+              }
+            },
+            {
+              "id": "KUB-TOKEN",
+              "shortDescription": {
+                "text": "Disable automatic service-account token mounting for this baseline."
+              }
+            },
+            {
+              "id": "KUB-READONLY",
+              "shortDescription": {
+                "text": "Use a read-only root filesystem for this baseline."
+              }
+            },
+            {
+              "id": "TF-INGRESS",
+              "shortDescription": {
+                "text": "Restrict public SSH and RDP ingress, including all-protocol access."
+              }
+            },
+            {
+              "id": "TF-ENCRYPTION",
+              "shortDescription": {
+                "text": "Explicitly enable EBS volume encryption."
+              }
+            },
+            {
+              "id": "TF-PUBLICACCESS",
+              "shortDescription": {
+                "text": "Enable all four S3 public access block settings."
+              }
+            },
+            {
+              "id": "TF-IAM",
+              "shortDescription": {
+                "text": "Do not combine global action and global resource wildcards in an Allow statement."
+              }
+            },
+            {
+              "id": "TF-UNKNOWN",
+              "shortDescription": {
+                "text": "Resolve unknown security-relevant planned values before approving."
+              }
+            },
+            {
+              "id": "PY-SHELL",
+              "shortDescription": {
+                "text": "Avoid literal shell=True in supported subprocess calls."
+              }
+            },
+            {
+              "id": "PY-DYNAMIC",
+              "shortDescription": {
+                "text": "Avoid direct eval or exec calls on this static baseline."
+              }
+            },
+            {
+              "id": "SECRET-TOKEN",
+              "shortDescription": {
+                "text": "Remove supported credential-shaped literals and rotate actual exposed credentials."
+              }
+            }
+          ],
+          "version": "1.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

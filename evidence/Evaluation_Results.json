@@ -1,0 +1,221 @@
+{
+  "scope": "24 synthetic cases with manually specified rule sets, not a production vulnerability benchmark",
+  "cases": [
+    {
+      "case": "kub_nonroot",
+      "expected_rules": [
+        "KUB-NONROOT"
+      ],
+      "actual_rules": [
+        "KUB-NONROOT"
+      ],
+      "passed": true
+    },
+    {
+      "case": "kub_privileged",
+      "expected_rules": [
+        "KUB-PRIVILEGED"
+      ],
+      "actual_rules": [
+        "KUB-PRIVILEGED"
+      ],
+      "passed": true
+    },
+    {
+      "case": "kub_escalation",
+      "expected_rules": [
+        "KUB-ESCALATION"
+      ],
+      "actual_rules": [
+        "KUB-ESCALATION"
+      ],
+      "passed": true
+    },
+    {
+      "case": "kub_capabilities",
+      "expected_rules": [
+        "KUB-CAPABILITIES"
+      ],
+      "actual_rules": [
+        "KUB-CAPABILITIES"
+      ],
+      "passed": true
+    },
+    {
+      "case": "kub_seccomp",
+      "expected_rules": [
+        "KUB-SECCOMP"
+      ],
+      "actual_rules": [
+        "KUB-SECCOMP"
+      ],
+      "passed": true
+    },
+    {
+      "case": "kub_host",
+      "expected_rules": [
+        "KUB-HOST"
+      ],
+      "actual_rules": [
+        "KUB-HOST"
+      ],
+      "passed": true
+    },
+    {
+      "case": "kub_image",
+      "expected_rules": [
+        "KUB-IMAGE"
+      ],
+      "actual_rules": [
+        "KUB-IMAGE"
+      ],
+      "passed": true
+    },
+    {
+      "case": "kub_token",
+      "expected_rules": [
+        "KUB-TOKEN"
+      ],
+      "actual_rules": [
+        "KUB-TOKEN"
+      ],
+      "passed": true
+    },
+    {
+      "case": "kub_readonly",
+      "expected_rules": [
+        "KUB-READONLY"
+      ],
+      "actual_rules": [
+        "KUB-READONLY"
+      ],
+      "passed": true
+    },
+    {
+      "case": "tf_ingress",
+      "expected_rules": [
+        "TF-INGRESS"
+      ],
+      "actual_rules": [
+        "TF-INGRESS"
+      ],
+      "passed": true
+    },
+    {
+      "case": "tf_encryption",
+      "expected_rules": [
+        "TF-ENCRYPTION"
+      ],
+      "actual_rules": [
+        "TF-ENCRYPTION"
+      ],
+      "passed": true
+    },
+    {
+      "case": "tf_publicaccess",
+      "expected_rules": [
+        "TF-PUBLICACCESS"
+      ],
+      "actual_rules": [
+        "TF-PUBLICACCESS"
+      ],
+      "passed": true
+    },
+    {
+      "case": "tf_iam",
+      "expected_rules": [
+        "TF-IAM"
+      ],
+      "actual_rules": [
+        "TF-IAM"
+      ],
+      "passed": true
+    },
+    {
+      "case": "tf_unknown",
+      "expected_rules": [
+        "TF-UNKNOWN"
+      ],
+      "actual_rules": [
+        "TF-UNKNOWN"
+      ],
+      "passed": true
+    },
+    {
+      "case": "py_shell",
+      "expected_rules": [
+        "PY-SHELL"
+      ],
+      "actual_rules": [
+        "PY-SHELL"
+      ],
+      "passed": true
+    },
+    {
+      "case": "py_dynamic",
+      "expected_rules": [
+        "PY-DYNAMIC"
+      ],
+      "actual_rules": [
+        "PY-DYNAMIC"
+      ],
+      "passed": true
+    },
+    {
+      "case": "secret_token",
+      "expected_rules": [
+        "SECRET-TOKEN"
+      ],
+      "actual_rules": [
+        "SECRET-TOKEN"
+      ],
+      "passed": true
+    },
+    {
+      "case": "clean_baseline",
+      "expected_rules": [],
+      "actual_rules": [],
+      "passed": true
+    },
+    {
+      "case": "container_override",
+      "expected_rules": [],
+      "actual_rules": [],
+      "passed": true
+    },
+    {
+      "case": "scoped_admin",
+      "expected_rules": [],
+      "actual_rules": [],
+      "passed": true
+    },
+    {
+      "case": "unknown_identifier",
+      "expected_rules": [],
+      "actual_rules": [],
+      "passed": true
+    },
+    {
+      "case": "deleted_resource",
+      "expected_rules": [],
+      "actual_rules": [],
+      "passed": true
+    },
+    {
+      "case": "safe_subprocess",
+      "expected_rules": [],
+      "actual_rules": [],
+      "passed": true
+    },
+    {
+      "case": "deny_wildcard",
+      "expected_rules": [],
+      "actual_rules": [],
+      "passed": true
+    }
+  ],
+  "true_positive_rule_hits": 17,
+  "false_positive_rule_hits": 0,
+  "false_negative_rule_hits": 0,
+  "passed": true
+}

@@ -1,0 +1,69 @@
+{
+  "scope": "Local subprocess CLI and files; GitHub hosted workflow not executed",
+  "checks": [
+    {
+      "name": "Clean inputs return zero with declared coverage",
+      "passed": true
+    },
+    {
+      "name": "Unsafe inputs return one with seventeen rule findings",
+      "passed": true
+    },
+    {
+      "name": "SARIF contains rule IDs locations and deterministic fingerprints",
+      "passed": true
+    },
+    {
+      "name": "Credential fixture is absent from output and process logs",
+      "passed": true
+    },
+    {
+      "name": "Repeated CLI output is deterministic",
+      "passed": true
+    },
+    {
+      "name": "Reviewed replacement configurations remove the fixture findings",
+      "passed": true
+    },
+    {
+      "name": "Invalid JSON returns two and removes stale SARIF",
+      "passed": true
+    },
+    {
+      "name": "Missing declared input fails closed",
+      "passed": true
+    },
+    {
+      "name": "Current exact waiver returns zero while retaining suppressed finding",
+      "passed": true
+    },
+    {
+      "name": "Expired waiver returns two",
+      "passed": true
+    },
+    {
+      "name": "Stale wildcard-like waiver cannot bypass findings",
+      "passed": true
+    },
+    {
+      "name": "Escaping input path fails closed",
+      "passed": true
+    },
+    {
+      "name": "Unparseable Python returns two",
+      "passed": true
+    },
+    {
+      "name": "Unsupported resource type does not produce a clean pass",
+      "passed": true
+    },
+    {
+      "name": "Unknown security relevant plan value blocks the gate",
+      "passed": true
+    },
+    {
+      "name": "Unknown computed identifier alone does not block",
+      "passed": true
+    }
+  ]
+}

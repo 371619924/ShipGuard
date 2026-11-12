@@ -1,0 +1,90 @@
+{
+  "format_version": "1.2",
+  "resource_changes": [
+    {
+      "mode": "managed",
+      "type": "aws_security_group",
+      "address": "aws_security_group.app",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "after": {
+          "ingress": [
+            {
+              "protocol": "tcp",
+              "from_port": 22,
+              "to_port": 22,
+              "cidr_blocks": [
+                "0.0.0.0/0"
+              ],
+              "ipv6_cidr_blocks": []
+            }
+          ]
+        },
+        "after_unknown": {}
+      }
+    },
+    {
+      "mode": "managed",
+      "type": "aws_ebs_volume",
+      "address": "aws_ebs_volume.data",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "after": {
+          "encrypted": false
+        },
+        "after_unknown": {}
+      }
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket_public_access_block",
+      "address": "aws_s3_bucket_public_access_block.data",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "after": {
+          "block_public_acls": true,
+          "block_public_policy": false,
+          "ignore_public_acls": true,
+          "restrict_public_buckets": true
+        },
+        "after_unknown": {}
+      }
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_policy",
+      "address": "aws_iam_policy.app",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "after": {
+          "policy": "{\"Statement\": [{\"Effect\": \"Allow\", \"Action\": \"*\", \"Resource\": \"*\"}]}"
+        },
+        "after_unknown": {}
+      }
+    },
+    {
+      "mode": "managed",
+      "type": "aws_ebs_volume",
+      "address": "aws_ebs_volume.pending",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "after": {
+          "encrypted": false
+        },
+        "after_unknown": {
+          "encrypted": true
+        }
+      }
+    }
+  ]
+}

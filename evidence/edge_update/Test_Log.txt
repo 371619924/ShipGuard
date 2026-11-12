@@ -1,0 +1,29 @@
+test_backward_clock_drift_limit (edge_update.test_update.UpdateTests.test_backward_clock_drift_limit) ... ok
+test_boolean_version (edge_update.test_update.UpdateTests.test_boolean_version) ... ok
+test_committed_corruption_detected (edge_update.test_update.UpdateTests.test_committed_corruption_detected) ... ok
+test_concurrent_writers (edge_update.test_update.UpdateTests.test_concurrent_writers) ... ok
+test_expired_metadata (edge_update.test_update.UpdateTests.test_expired_metadata) ... ok
+test_expiry_boundary (edge_update.test_update.UpdateTests.test_expiry_boundary) ... ok
+test_forward_clock_drift (edge_update.test_update.UpdateTests.test_forward_clock_drift) ... ok
+test_http_disconnect (edge_update.test_update.UpdateTests.test_http_disconnect) ... ok
+test_http_intermittent_retry (edge_update.test_update.UpdateTests.test_http_intermittent_retry) ... ok
+test_http_throttled_transfer (edge_update.test_update.UpdateTests.test_http_throttled_transfer) ... ok
+test_metadata_tampering (edge_update.test_update.UpdateTests.test_metadata_tampering) ... ok
+test_offline_committed_image (edge_update.test_update.UpdateTests.test_offline_committed_image) ... ok
+test_oversized_payload (edge_update.test_update.UpdateTests.test_oversized_payload) ... ok
+test_payload_tampering (edge_update.test_update.UpdateTests.test_payload_tampering) ... ok
+test_process_crash_after_commit (edge_update.test_update.UpdateTests.test_process_crash_after_commit) ... ok
+test_process_crash_after_stage (edge_update.test_update.UpdateTests.test_process_crash_after_stage) ... ok
+test_process_crash_during_write (edge_update.test_update.UpdateTests.test_process_crash_during_write) ... ok
+test_provisioning_reset (edge_update.test_update.UpdateTests.test_provisioning_reset) ... ok
+test_rollback (edge_update.test_update.UpdateTests.test_rollback) ... ok
+test_same_version_replay (edge_update.test_update.UpdateTests.test_same_version_replay) ... ok
+test_target_traversal (edge_update.test_update.UpdateTests.test_target_traversal) ... ok
+test_truncated_envelope (edge_update.test_update.UpdateTests.test_truncated_envelope) ... ok
+test_valid_update (edge_update.test_update.UpdateTests.test_valid_update) ... ok
+test_wrong_signing_key (edge_update.test_update.UpdateTests.test_wrong_signing_key) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.669s
+
+OK

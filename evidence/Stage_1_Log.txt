@@ -1,0 +1,41 @@
+test_all_protocol_public_ingress_is_detected (test_engine.GateTests.test_all_protocol_public_ingress_is_detected) ... ok
+test_boolean_manifest_version_rejected (test_engine.GateTests.test_boolean_manifest_version_rejected) ... ok
+test_clean_fixture (test_engine.GateTests.test_clean_fixture) ... ok
+test_container_uid_overrides_pod_uid (test_engine.GateTests.test_container_uid_overrides_pod_uid) ... ok
+test_credential_match_is_omitted_from_reports (test_engine.GateTests.test_credential_match_is_omitted_from_reports) ... ok
+test_current_exact_exception_is_visible (test_engine.GateTests.test_current_exact_exception_is_visible) ... ok
+test_delete_only_resource_is_not_a_deploy_target (test_engine.GateTests.test_delete_only_resource_is_not_a_deploy_target) ... ok
+test_deny_wildcard_is_not_allow_wildcard (test_engine.GateTests.test_deny_wildcard_is_not_allow_wildcard) ... ok
+test_deployment_template_is_scanned (test_engine.GateTests.test_deployment_template_is_scanned) ... ok
+test_duplicate_json_key_rejected (test_engine.GateTests.test_duplicate_json_key_rejected) ... ok
+test_duplicate_manifest_paths_rejected (test_engine.GateTests.test_duplicate_manifest_paths_rejected) ... ok
+test_duplicate_resource_address_rejected (test_engine.GateTests.test_duplicate_resource_address_rejected) ... ok
+test_empty_containers_not_clean (test_engine.GateTests.test_empty_containers_not_clean) ... ok
+test_empty_terraform_scope_rejected (test_engine.GateTests.test_empty_terraform_scope_rejected) ... ok
+test_ephemeral_container_is_scanned (test_engine.GateTests.test_ephemeral_container_is_scanned) ... ok
+test_expired_exception_fails (test_engine.GateTests.test_expired_exception_fails) ... ok
+test_file_size_limit (test_engine.GateTests.test_file_size_limit) ... ok
+test_host_path_blocks_even_without_host_network (test_engine.GateTests.test_host_path_blocks_even_without_host_network) ... ok
+test_iam_complements_require_semantic_review (test_engine.GateTests.test_iam_complements_require_semantic_review) ... ok
+test_init_container_is_scanned (test_engine.GateTests.test_init_container_is_scanned) ... ok
+test_ipv6_public_rdp_is_detected (test_engine.GateTests.test_ipv6_public_rdp_is_detected) ... ok
+test_nonfinite_json_rejected (test_engine.GateTests.test_nonfinite_json_rejected) ... ok
+test_python_strings_are_not_ast_calls (test_engine.GateTests.test_python_strings_are_not_ast_calls) ... ok
+test_python_syntax_error_is_not_clean (test_engine.GateTests.test_python_syntax_error_is_not_clean) ... ok
+test_replacement_checks_after_values (test_engine.GateTests.test_replacement_checks_after_values) ... ok
+test_same_inputs_produce_identical_report (test_engine.GateTests.test_same_inputs_produce_identical_report) ... ok
+test_stale_exception_fails (test_engine.GateTests.test_stale_exception_fails) ... ok
+test_string_boolean_cannot_bypass_security (test_engine.GateTests.test_string_boolean_cannot_bypass_security) ... ok
+test_subprocess_import_alias (test_engine.GateTests.test_subprocess_import_alias) ... ok
+test_symlink_input_rejected (test_engine.GateTests.test_symlink_input_rejected) ... ok
+test_traversal_path_rejected (test_engine.GateTests.test_traversal_path_rejected) ... ok
+test_unknown_nonsecurity_identifier_is_ignored (test_engine.GateTests.test_unknown_nonsecurity_identifier_is_ignored) ... ok
+test_unknown_security_value_blocks (test_engine.GateTests.test_unknown_security_value_blocks) ... ok
+test_unknown_security_values_cannot_be_waived (test_engine.GateTests.test_unknown_security_values_cannot_be_waived) ... ok
+test_unsupported_kind_fails (test_engine.GateTests.test_unsupported_kind_fails) ... ok
+test_unsupported_resource_is_not_silently_skipped (test_engine.GateTests.test_unsupported_resource_is_not_silently_skipped) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.038s
+
+OK

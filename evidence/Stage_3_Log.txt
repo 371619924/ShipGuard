@@ -1,0 +1,1 @@
+{"scope": "24 synthetic cases with manually specified rule sets, not a production vulnerability benchmark", "true_positive_rule_hits": 17, "false_positive_rule_hits": 0, "false_negative_rule_hits": 0, "passed": true}

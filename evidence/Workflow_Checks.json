@@ -1,0 +1,53 @@
+{
+  "scope": "Local JSON-compatible YAML structure checks only; no GitHub runner execution",
+  "checks": [
+    {
+      "name": "Only ordinary PR push and manual triggers",
+      "passed": true
+    },
+    {
+      "name": "No privileged pull request trigger",
+      "passed": true
+    },
+    {
+      "name": "Default contents permission is read only",
+      "passed": true
+    },
+    {
+      "name": "No job permission escalation",
+      "passed": true
+    },
+    {
+      "name": "Every external action has a complete SHA",
+      "passed": true
+    },
+    {
+      "name": "Checkout credentials are not persisted",
+      "passed": true
+    },
+    {
+      "name": "Job has a finite timeout",
+      "passed": true
+    },
+    {
+      "name": "Tests are included",
+      "passed": true
+    },
+    {
+      "name": "Labeled evaluation is included",
+      "passed": true
+    },
+    {
+      "name": "Repository gate command is included",
+      "passed": true
+    },
+    {
+      "name": "No ignored step failures",
+      "passed": true
+    },
+    {
+      "name": "No external expressions or configured secrets",
+      "passed": true
+    }
+  ]
+}

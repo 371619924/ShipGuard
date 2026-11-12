@@ -1,0 +1,135 @@
+{
+  "notice": "Synthetic hand-labeled cases; expected sets are specified before running the scanner.",
+  "cases": [
+    {
+      "case": "kub_nonroot",
+      "expected_rules": [
+        "KUB-NONROOT"
+      ]
+    },
+    {
+      "case": "kub_privileged",
+      "expected_rules": [
+        "KUB-PRIVILEGED"
+      ]
+    },
+    {
+      "case": "kub_escalation",
+      "expected_rules": [
+        "KUB-ESCALATION"
+      ]
+    },
+    {
+      "case": "kub_capabilities",
+      "expected_rules": [
+        "KUB-CAPABILITIES"
+      ]
+    },
+    {
+      "case": "kub_seccomp",
+      "expected_rules": [
+        "KUB-SECCOMP"
+      ]
+    },
+    {
+      "case": "kub_host",
+      "expected_rules": [
+        "KUB-HOST"
+      ]
+    },
+    {
+      "case": "kub_image",
+      "expected_rules": [
+        "KUB-IMAGE"
+      ]
+    },
+    {
+      "case": "kub_token",
+      "expected_rules": [
+        "KUB-TOKEN"
+      ]
+    },
+    {
+      "case": "kub_readonly",
+      "expected_rules": [
+        "KUB-READONLY"
+      ]
+    },
+    {
+      "case": "tf_ingress",
+      "expected_rules": [
+        "TF-INGRESS"
+      ]
+    },
+    {
+      "case": "tf_encryption",
+      "expected_rules": [
+        "TF-ENCRYPTION"
+      ]
+    },
+    {
+      "case": "tf_publicaccess",
+      "expected_rules": [
+        "TF-PUBLICACCESS"
+      ]
+    },
+    {
+      "case": "tf_iam",
+      "expected_rules": [
+        "TF-IAM"
+      ]
+    },
+    {
+      "case": "tf_unknown",
+      "expected_rules": [
+        "TF-UNKNOWN"
+      ]
+    },
+    {
+      "case": "py_shell",
+      "expected_rules": [
+        "PY-SHELL"
+      ]
+    },
+    {
+      "case": "py_dynamic",
+      "expected_rules": [
+        "PY-DYNAMIC"
+      ]
+    },
+    {
+      "case": "secret_token",
+      "expected_rules": [
+        "SECRET-TOKEN"
+      ]
+    },
+    {
+      "case": "clean_baseline",
+      "expected_rules": []
+    },
+    {
+      "case": "container_override",
+      "expected_rules": []
+    },
+    {
+      "case": "scoped_admin",
+      "expected_rules": []
+    },
+    {
+      "case": "unknown_identifier",
+      "expected_rules": []
+    },
+    {
+      "case": "deleted_resource",
+      "expected_rules": []
+    },
+    {
+      "case": "safe_subprocess",
+      "expected_rules": []
+    },
+    {
+      "case": "deny_wildcard",
+      "expected_rules": []
+    }
+  ]
+}

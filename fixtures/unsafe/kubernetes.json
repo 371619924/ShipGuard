@@ -1,0 +1,40 @@
+[
+  {
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+      "name": "demo",
+      "namespace": "sample"
+    },
+    "spec": {
+      "automountServiceAccountToken": true,
+      "securityContext": {
+        "runAsNonRoot": false,
+        "runAsUser": 1001,
+        "seccompProfile": {
+          "type": "Unconfined"
+        }
+      },
+      "containers": [
+        {
+          "name": "app",
+          "image": "example.invalid/demo:latest",
+          "securityContext": {
+            "allowPrivilegeEscalation": true,
+            "readOnlyRootFilesystem": false,
+            "capabilities": {
+              "drop": [
+                "ALL"
+              ],
+              "add": [
+                "SYS_ADMIN"
+              ]
+            },
+            "privileged": true
+          }
+        }
+      ],
+      "hostPID": true
+    }
+  }
+]

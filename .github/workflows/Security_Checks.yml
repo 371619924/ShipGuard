@@ -1,0 +1,48 @@
+{
+  "name": "ShipGuard security checks",
+  "on": {
+    "pull_request": {},
+    "push": {
+      "branches": [
+        "main"
+      ]
+    },
+    "workflow_dispatch": {}
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "check": {
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 5,
+      "steps": [
+        {
+          "name": "Checkout source",
+          "uses": "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "name": "Verify scanner behavior",
+          "run": "make test"
+        },
+        {
+          "name": "Evaluate labeled synthetic cases",
+          "run": "make evaluate"
+        },
+        {
+          "run": "python3 -m pip install -r requirements.txt"
+        },
+        {
+          "run": "python3 -m edge_update.run_validation"
+        },
+        {
+          "name": "Gate declared repository inputs",
+          "run": "python3 run.py --repo repository --out evidence/repository"
+        }
+      ]
+    }
+  }
+}

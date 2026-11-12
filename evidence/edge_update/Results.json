@@ -1,0 +1,114 @@
+{
+  "runtime": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "python": "3.12.14"
+  },
+  "tests": 24,
+  "passed": 24,
+  "cases": [
+    {
+      "case": "test_backward_clock_drift_limit",
+      "status": "passed"
+    },
+    {
+      "case": "test_boolean_version",
+      "status": "passed"
+    },
+    {
+      "case": "test_committed_corruption_detected",
+      "status": "passed"
+    },
+    {
+      "case": "test_concurrent_writers",
+      "status": "passed"
+    },
+    {
+      "case": "test_expired_metadata",
+      "status": "passed"
+    },
+    {
+      "case": "test_expiry_boundary",
+      "status": "passed"
+    },
+    {
+      "case": "test_forward_clock_drift",
+      "status": "passed"
+    },
+    {
+      "case": "test_http_disconnect",
+      "status": "passed"
+    },
+    {
+      "case": "test_http_intermittent_retry",
+      "status": "passed"
+    },
+    {
+      "case": "test_http_throttled_transfer",
+      "status": "passed"
+    },
+    {
+      "case": "test_metadata_tampering",
+      "status": "passed"
+    },
+    {
+      "case": "test_offline_committed_image",
+      "status": "passed"
+    },
+    {
+      "case": "test_oversized_payload",
+      "status": "passed"
+    },
+    {
+      "case": "test_payload_tampering",
+      "status": "passed"
+    },
+    {
+      "case": "test_process_crash_after_commit",
+      "status": "passed"
+    },
+    {
+      "case": "test_process_crash_after_stage",
+      "status": "passed"
+    },
+    {
+      "case": "test_process_crash_during_write",
+      "status": "passed"
+    },
+    {
+      "case": "test_provisioning_reset",
+      "status": "passed"
+    },
+    {
+      "case": "test_rollback",
+      "status": "passed"
+    },
+    {
+      "case": "test_same_version_replay",
+      "status": "passed"
+    },
+    {
+      "case": "test_target_traversal",
+      "status": "passed"
+    },
+    {
+      "case": "test_truncated_envelope",
+      "status": "passed"
+    },
+    {
+      "case": "test_valid_update",
+      "status": "passed"
+    },
+    {
+      "case": "test_wrong_signing_key",
+      "status": "passed"
+    }
+  ],
+  "limitations": [
+    "No physical power-cycle or hardware durability proof",
+    "No arm64, VM, container or multi-distribution runtime executed",
+    "Clock rollback accepted without trusted time; explicit expected limitation",
+    "No tc/netem execution; loopback HTTP fixtures only",
+    "No Razor, Sigstore or SBOM integration"
+  ]
+}

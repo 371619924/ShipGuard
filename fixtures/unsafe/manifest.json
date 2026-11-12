@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "kubernetes_file": "kubernetes.json",
+  "terraform_file": "terraform.json",
+  "source_files": [
+    "src/service.py",
+    "config.env"
+  ]
+}

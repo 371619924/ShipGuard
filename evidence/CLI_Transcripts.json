@@ -1,0 +1,203 @@
+[
+  {
+    "arguments": [
+      "--repo",
+      "/workspace/scratch/ac8fde9bfb7a/output/ksp/ShipGuard/fixtures/safe",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"clean\", \"active_findings\": 0, \"suppressed_findings\": 0, \"scope\": {\"input_files\": 4, \"kubernetes_containers\": 1, \"terraform_resources\": 4, \"python_files\": 1}}\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/workspace/scratch/ac8fde9bfb7a/output/ksp/ShipGuard/fixtures/unsafe",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30"
+    ],
+    "exit_code": 1,
+    "stdout": "{\"status\": \"blocked\", \"active_findings\": 17, \"suppressed_findings\": 0, \"scope\": {\"input_files\": 4, \"kubernetes_containers\": 1, \"terraform_resources\": 5, \"python_files\": 1}}\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/workspace/scratch/ac8fde9bfb7a/output/ksp/ShipGuard/fixtures/unsafe",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30"
+    ],
+    "exit_code": 1,
+    "stdout": "{\"status\": \"blocked\", \"active_findings\": 17, \"suppressed_findings\": 0, \"scope\": {\"input_files\": 4, \"kubernetes_containers\": 1, \"terraform_resources\": 5, \"python_files\": 1}}\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/tmp/tmpqr5twdn_/repo",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"clean\", \"active_findings\": 0, \"suppressed_findings\": 0, \"scope\": {\"input_files\": 4, \"kubernetes_containers\": 1, \"terraform_resources\": 4, \"python_files\": 1}}\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/tmp/tmpqr5twdn_/repo",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"status\": \"error\", \"error\": \"Invalid JSON input\"}\n"
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/tmp/tmpqr5twdn_/repo",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"status\": \"error\", \"error\": \"Input is missing or outside repository\"}\n"
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/tmp/tmpqr5twdn_/repo",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30"
+    ],
+    "exit_code": 1,
+    "stdout": "{\"status\": \"blocked\", \"active_findings\": 1, \"suppressed_findings\": 0, \"scope\": {\"input_files\": 4, \"kubernetes_containers\": 1, \"terraform_resources\": 4, \"python_files\": 1}}\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/tmp/tmpqr5twdn_/repo",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30",
+      "--exceptions",
+      "exceptions.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"clean\", \"active_findings\": 0, \"suppressed_findings\": 1, \"scope\": {\"input_files\": 4, \"kubernetes_containers\": 1, \"terraform_resources\": 4, \"python_files\": 1}}\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/tmp/tmpqr5twdn_/repo",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30",
+      "--exceptions",
+      "exceptions.json"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"status\": \"error\", \"error\": \"Exception has expired\"}\n"
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/tmp/tmpqr5twdn_/repo",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30",
+      "--exceptions",
+      "exceptions.json"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"status\": \"error\", \"error\": \"Exception does not match a current finding\"}\n"
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/tmp/tmpqr5twdn_/repo",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"status\": \"error\", \"error\": \"Unsafe manifest path\"}\n"
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/tmp/tmpqr5twdn_/repo",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"status\": \"error\", \"error\": \"Python source has a syntax error\"}\n"
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/tmp/tmpqr5twdn_/repo",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"status\": \"error\", \"error\": \"Unsupported Terraform resource scope\"}\n"
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/workspace/scratch/ac8fde9bfb7a/output/ksp/ShipGuard/fixtures/tf_unknown",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30"
+    ],
+    "exit_code": 1,
+    "stdout": "{\"status\": \"blocked\", \"active_findings\": 1, \"suppressed_findings\": 0, \"scope\": {\"input_files\": 4, \"kubernetes_containers\": 1, \"terraform_resources\": 4, \"python_files\": 1}}\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "--repo",
+      "/workspace/scratch/ac8fde9bfb7a/output/ksp/ShipGuard/fixtures/unknown_identifier",
+      "--out",
+      "/tmp/tmpqr5twdn_/out",
+      "--as-of",
+      "2026-10-30"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"clean\", \"active_findings\": 0, \"suppressed_findings\": 0, \"scope\": {\"input_files\": 4, \"kubernetes_containers\": 1, \"terraform_resources\": 4, \"python_files\": 1}}\n",
+    "stderr": ""
+  }
+]

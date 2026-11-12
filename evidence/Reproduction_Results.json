@@ -1,0 +1,104 @@
+{
+  "stages": [
+    {
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "integration.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "evaluate.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "check_workflow.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "run.py",
+        "--repo",
+        "repository",
+        "--out",
+        "evidence/repository",
+        "--as-of",
+        "2026-10-30"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "-m",
+        "edge_update.run_validation"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "fresh_source_stages": [
+    {
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "integration.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "evaluate.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "check_workflow.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "run.py",
+        "--repo",
+        "repository",
+        "--out",
+        "evidence/repository",
+        "--as-of",
+        "2026-10-30"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "-m",
+        "edge_update.run_validation"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_only_reproduction": true,
+  "edge_results_match": true
+}

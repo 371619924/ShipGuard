@@ -1,0 +1,32 @@
+[
+  {
+    "architecture": "x86_64",
+    "distribution": "debian",
+    "runtime_status": "planned; not executed"
+  },
+  {
+    "architecture": "x86_64",
+    "distribution": "ubuntu",
+    "runtime_status": "planned; not executed"
+  },
+  {
+    "architecture": "x86_64",
+    "distribution": "fedora",
+    "runtime_status": "planned; not executed"
+  },
+  {
+    "architecture": "aarch64",
+    "distribution": "debian",
+    "runtime_status": "planned; not executed"
+  },
+  {
+    "architecture": "aarch64",
+    "distribution": "ubuntu",
+    "runtime_status": "planned; not executed"
+  },
+  {
+    "architecture": "aarch64",
+    "distribution": "fedora",
+    "runtime_status": "planned; not executed"
+  }
+]
