@@ -8,7 +8,6 @@ import subprocess
 import sys
 import tempfile
 
-
 ROOT = Path(__file__).resolve().parent
 
 COMMANDS = [
@@ -75,9 +74,7 @@ def validate(root):
                 + "\nStage timed out after 45 seconds.\n",
                 encoding="utf-8",
             )
-            raise RuntimeError(
-                f"Stage {i} timed out. See log: {log_path}"
-            ) from error
+            raise RuntimeError(f"Stage {i} timed out. See log: {log_path}") from error
 
         log = output_text(result.stdout) + output_text(result.stderr)
         log_path.write_text(log, encoding="utf-8")
@@ -114,10 +111,7 @@ def main():
         "edge_update/guard.py",
         "repository/manifest.json",
     ]
-    missing = [
-        name for name in required
-        if not (ROOT / name).exists()
-    ]
+    missing = [name for name in required if not (ROOT / name).exists()]
 
     if missing:
         print(
@@ -137,9 +131,7 @@ def main():
         print("=== Original source validation ===", flush=True)
         records = validate(ROOT)
 
-        with tempfile.TemporaryDirectory(
-            prefix="shipguard_clean_"
-        ) as directory:
+        with tempfile.TemporaryDirectory(prefix="shipguard_clean_") as directory:
             fresh = Path(directory) / "ShipGuard"
 
             shutil.copytree(
@@ -164,20 +156,16 @@ def main():
             clean = validate(fresh)
 
             before = json.loads(
-                (
-                    ROOT / "evidence/edge_update/Results.json"
-                ).read_text(encoding="utf-8")
+                (ROOT / "evidence/edge_update/Results.json").read_text(encoding="utf-8")
             )
             after = json.loads(
-                (
-                    fresh / "evidence/edge_update/Results.json"
-                ).read_text(encoding="utf-8")
+                (fresh / "evidence/edge_update/Results.json").read_text(
+                    encoding="utf-8"
+                )
             )
 
             if before != after:
-                raise RuntimeError(
-                    "Fresh-source edge-update results do not match."
-                )
+                raise RuntimeError("Fresh-source edge-update results do not match.")
 
             summary = {
                 "stages": len(records),
